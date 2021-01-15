@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
-import com.example.msappkotlin.common.LiveEvent
 import com.example.msappkotlin.features.main.movies.MainFragment
 import com.example.msappkotlin.features.main.movies.MainFragmentDirections
 import com.example.msappkotlin.features.main.movies.MoviesViewModel

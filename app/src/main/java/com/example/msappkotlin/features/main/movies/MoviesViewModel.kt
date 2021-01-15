@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavDirections
-import com.example.msappkotlin.common.LiveEventData
 import com.example.msappkotlin.data.MovieRepository
 import com.example.msappkotlin.model.Movie
 import kotlinx.coroutines.launch
@@ -15,9 +14,6 @@ class MoviesViewModel(
 ): ViewModel()
 {
 
-    enum class NavigationEvent {
-        OPEN_DETAIL_FRAGMENT
-    }
 
     val movies = MutableLiveData<List<Movie>>()
     val navigationEvent = MutableLiveData<NavDirections>()
