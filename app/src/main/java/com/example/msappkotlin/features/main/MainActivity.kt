@@ -1,14 +1,11 @@
-package com.example.msappkotlin
+package com.example.msappkotlin.features.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
-import com.example.msappkotlin.features.main.movies.MainFragment
-import com.example.msappkotlin.features.main.movies.MainFragmentDirections
-import com.example.msappkotlin.features.main.movies.MoviesViewModel
+import com.example.msappkotlin.R
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
@@ -29,11 +26,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleNavigationEvent(navDirections: NavDirections){
-        when(navDirections){
-            is MainFragmentDirections.ActionMainToDetail -> {
+//        when(navDirections){
+//            is MainFragmentDirections.ActionMainToDetail -> {
                 findNavController(R.id.mainScreenNavigation).navigate(navDirections)
-            }
+//            }
+        //todo :No need for this check, navDirections is all you need to navigate
         }
 
     }
-}

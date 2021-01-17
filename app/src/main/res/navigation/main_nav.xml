@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.msappkotlin.features.main.movies.DetailFragment"
+        android:name="com.example.msappkotlin.features.main.details.DetailFragment"
         android:label="DetailFragment"
         tools:layout="@layout/fragment_detail">
 

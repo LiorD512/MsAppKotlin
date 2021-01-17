@@ -45,6 +45,7 @@ class MovieListAdapter(private val listener: MovieListAdapterListener) :
                     .load(movie.image)
                     .into(itemView.item_list_movie_image)
             }
+            //todo : we used to work with Glide but now we are working with Coil, check it out
         }
     }
 

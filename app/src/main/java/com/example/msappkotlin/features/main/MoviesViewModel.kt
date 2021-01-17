@@ -1,11 +1,11 @@
-package com.example.msappkotlin.features.main.movies
+package com.example.msappkotlin.features.main
 
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavDirections
 import com.example.msappkotlin.data.MovieRepository
+import com.example.msappkotlin.features.main.movies.MainFragmentDirections
 import com.example.msappkotlin.model.Movie
 import kotlinx.coroutines.launch
 
@@ -13,7 +13,6 @@ class MoviesViewModel(
     private val movieRepository: MovieRepository
 ): ViewModel()
 {
-
 
     val movies = MutableLiveData<List<Movie>>()
     val navigationEvent = MutableLiveData<NavDirections>()
@@ -23,8 +22,10 @@ class MoviesViewModel(
             val list = movieRepository.getMovies()
             list?.let {
                 movies.postValue(list)
+              //todo :  movies.postValue(it)
             }
         }
+        //todo: server calls can throw exception - always surround by try{} catch{} here or on in the repository
     }
 
 
