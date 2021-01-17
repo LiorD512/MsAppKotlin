@@ -7,6 +7,7 @@ import androidx.navigation.NavDirections
 import com.example.msappkotlin.data.MovieRepository
 import com.example.msappkotlin.features.main.movies.MainFragmentDirections
 import com.example.msappkotlin.model.Movie
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MoviesViewModel(
@@ -19,6 +20,7 @@ class MoviesViewModel(
 
     fun getMovies(){
         viewModelScope.launch {
+            //use .launch(Dispatchers.IO) with network calls
             val list = movieRepository.getMovies()
             list?.let {
                 movies.postValue(list)
